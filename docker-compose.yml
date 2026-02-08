@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  mikhmon:
+    build: .
+    container_name: mikhmon_app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - PHP_ERROR_REPORTING=E_ALL
+      - PHP_DISPLAY_ERRORS=On
+      - PHP_MEMORY_LIMIT=128M
+      - PHP_UPLOAD_LIMIT=64M
+    networks:
+      - mikhmon_network
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    container_name: mikhmon_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - mikhmon_network
+
+  nginx:
+    image: nginx:alpine
+    container_name: mikhmon_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/var/www/html
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - mikhmon
+    networks:
+      - mikhmon_network
+
+networks:
+  mikhmon_network:
+    driver: bridge
+
+volumes:
+  redis_data:

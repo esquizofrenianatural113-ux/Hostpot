@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Generation Models Directory - Best AI Video Generators 2024</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-video"></i>
+                    <span>AI Video Models</span>
+                </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#models" class="nav-link">Models</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#compare" class="nav-link">Compare</a>
+                    <a href="#resources" class="nav-link">Resources</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-toggle" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <input type="text" id="globalSearch" placeholder="Search AI video models...">
+            <button class="search-close" id="searchClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#models" class="mobile-nav-link">Models</a>
+            <a href="#features" class="mobile-nav-link">Features</a>
+            <a href="#compare" class="mobile-nav-link">Compare</a>
+            <a href="#resources" class="mobile-nav-link">Resources</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Updated February 2025</span>
+                </div>
+                <h1 class="hero-title">
+                    Discover the Best <span class="gradient-text">AI Video Generation</span> Models
+                </h1>
+                <p class="hero-description">
+                    A comprehensive directory of the most powerful AI video generation models. Compare features, pricing, capabilities, and find the perfect tool for your creative projects.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Models Listed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Free Options</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Features Compared</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#models" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Explore Models
+                    </a>
+                    <a href="#compare" class="btn btn-secondary">
+                        <i class="fas fa-balance-scale"></i>
+                        Compare All
+                    </a>
+                </div>
+                <div class="hero-search">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="heroSearch" placeholder="Search models, features, or capabilities...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section" id="models">
+        <div class="container">
+            <div class="filter-header">
+                <h2 class="section-title">Browse AI Video Generation Models</h2>
+                <p class="section-description">Filter and discover the perfect AI video model for your needs</p>
+            </div>
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label class="filter-label">Category</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="text-to-video">Text to Video</option>
+                        <option value="image-to-video">Image to Video</option>
+                        <option value="video-to-video">Video to Video</option>
+                        <option value="3d-video">3D Video</option>
+                        <option value="animation">Animation</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Pricing</label>
+                    <select id="pricingFilter" class="filter-select">
+                        <option value="all">All Pricing</option>
+                        <option value="free">Free</option>
+                        <option value="freemium">Freemium</option>
+                        <option value="paid">Paid</option>
+                        <option value="enterprise">Enterprise</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Quality</label>
+                    <select id="qualityFilter" class="filter-select">
+                        <option value="all">All Quality Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="professional">Professional</option>
+                        <option value="enterprise">Enterprise</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Sort By</label>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+                <button class="btn btn-outline" id="clearFilters">
+                    <i class="fas fa-times"></i>
+                    Clear Filters
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Grid -->
+    <section class="models-section">
+        <div class="container">
+            <div class="models-grid" id="modelsGrid">
+                <!-- Models will be loaded dynamically -->
+            </div>
+            <div class="load-more-container">
+                <button class="btn btn-primary btn-lg" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    Load More Models
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Use Our Directory?</h2>
+                <p class="section-description">Everything you need to make an informed decision</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="feature-title">Smart Search</h3>
+                    <p class="feature-description">Find the perfect model with our advanced search and filtering system</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="feature-title">Detailed Comparisons</h3>
+                    <p class="feature-description">Compare models side-by-side on features, pricing, and capabilities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="feature-title">User Reviews</h3>
+                    <p class="feature-description">Read authentic reviews from real users and industry experts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3 class="feature-title">Regular Updates</h3>
+                    <p class="feature-description">Stay current with the latest AI video generation models and features</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section" id="compare">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compare Top AI Video Models</h2>
+                <p class="section-description">See how the leading AI video generation models stack up</p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table" id="comparisonTable">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>OpenAI Sora</th>
+                            <th>Runway Gen-3</th>
+                            <th>Luma Dream Machine</th>
+                            <th>Kling AI</th>
+                            <th>Pika Labs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Text to Video</td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Image to Video</td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Video Duration</td>
+                            <td>Up to 60 seconds</td>
+                            <td>Up to 16 seconds</td>
+                            <td>Up to 10 seconds</td>
+                            <td>Up to 10 seconds</td>
+                            <td>Up to 3 seconds</td>
+                        </tr>
+                        <tr>
+                            <td>Resolution</td>
+                            <td>4K Ultra HD</td>
+                            <td>4K Ultra HD</td>
+                            <td>1080p HD</td>
+                            <td>1080p HD</td>
+                            <td>720p HD</td>
+                        </tr>
+                        <tr>
+                            <td>API Access</td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-minus-circle partial"></i></td>
+                            <td><i class="fas fa-minus-circle partial"></i></td>
+                            <td><i class="fas fa-times-circle cross"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Commercial Rights</td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-check-circle check"></i></td>
+                            <td><i class="fas fa-minus-circle partial"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Starting Price</td>
+                            <td>$0.30/video</td>
+                            <td>$0.50/video</td>
+                            <td>Free tier available</td>
+                            <td>$0.20/video</td>
+                            <td>Free tier available</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section" id="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Resources & Guides</h2>
+                <p class="section-description">Learn more about AI video generation</p>
+            </div>
+            <div class="resources-grid">
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="resource-title">Beginner's Guide</h3>
+                    <p class="resource-description">Get started with AI video generation in minutes</p>
+                </a>
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="resource-title">Tutorials</h3>
+                    <p class="resource-description">Step-by-step tutorials for each model</p>
+                </a>
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="resource-title">Industry Reports</h3>
+                    <p class="resource-description">Latest trends and market analysis</p>
+                </a>
+                <a href="#" class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="resource-title">Community</h3>
+                    <p class="resource-description">Join our Discord and discussion forums</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Updated</h2>
+                    <p>Get the latest AI video generation news and updates delivered to your inbox</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-video"></i>
+                        <span>AI Video Models</span>
+                    </div>
+                    <p class="footer-description">
+                        Your comprehensive directory for AI video generation models. Compare, discover, and create with the best AI tools.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#models">Models</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#compare">Compare</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Text to Video</a></li>
+                        <li><a href="#">Image to Video</a></li>
+                        <li><a href="#">Video to Video</a></li>
+                        <li><a href="#">3D Animation</a></li>
+                        <li><a href="#">Motion Graphics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Video Models Directory. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Model Detail Modal -->
+    <div class="modal" id="modelModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <div class="model-header-content">
+                    <div class="model-logo" id="modalModelLogo">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="model-header-info">
+                        <h2 id="modalModelName">Model Name</h2>
+                        <p id="modalModelTagline">Model tagline goes here</p>
+                        <div class="model-badges" id="modalModelBadges">
+                            <!-- Badges will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tabs">
+                    <button class="modal-tab active" data-tab="overview">Overview</button>
+                    <button class="modal-tab" data-tab="features">Features</button>
+                    <button class="modal-tab" data-tab="pricing">Pricing</button>
+                    <button class="modal-tab" data-tab="reviews">Reviews</button>
+                </div>
+                <div class="modal-tab-content" id="modalTabContent">
+                    <!-- Tab content will be loaded dynamically -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary" id="modalVisitBtn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    Visit Website
+                </a>
+                <button class="btn btn-outline" id="modalCompareBtn">
+                    <i class="fas fa-balance-scale"></i>
+                    Add to Compare
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <span class="toast-message" id="toastMessage">Action completed successfully</span>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

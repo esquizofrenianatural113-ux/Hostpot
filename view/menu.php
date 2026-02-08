@@ -19,7 +19,7 @@ if($m_user != "admin" && !isMobile()){
 
 ?>
 <div class="sidenav unselect">
-  <div class="text-center" id="brand">SKYNITY</div>
+  <div class="text-center" id="brand">MIKHMON</div>
   <div class="image-circle" style="background-image: url('<?= $logo ?>')"></div>
   <div class="sidenav_item tooltip">
     <select id="lsession" style="border:none;border-radius: 3px;font-weight: bold; width: 100%;" onchange="connect('statconn',this.value)">
